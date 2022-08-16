@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # install nginx and add html file
-sudo apt-get -y install nginx;echo "Hello World!" | sudo tee -a /var/www/html/index.html;sudo service nginx restart
+sudo apt-get -y install nginx;echo "Hello World" | sudo tee -a /var/www/html/index.html;sudo service nginx restart
