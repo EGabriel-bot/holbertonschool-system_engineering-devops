@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # install nginx and add html file
+sudo apt-get update -y;
 sudo apt-get install -y nginx;
 sudo mkdir /etc/nginx/html;
 sudo touch /etc/nginx/html/index.html;
