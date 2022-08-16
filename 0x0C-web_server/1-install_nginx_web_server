@@ -4,7 +4,7 @@ sudo apt-get -y install nginx;sudo touch /var/www/html/index.html echo "Hello Wo
   listen 80 default_server;
   listen [::]:80 default_server;
   root /var/www/html;
-  index index.html
+  index index.html;
 }" > /etc/nginx/sites-available/default
 
 sudo service nginx restart
