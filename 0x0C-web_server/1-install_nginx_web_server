@@ -9,5 +9,6 @@ printf %s "server {
   listen [::]:80 default_server;
   root /etc/nginx/html;
   index index.html;
-}" > /etc/nginx/sites-available/default;
+}
+" > /etc/nginx/sites-available/default;
 sudo service nginx restart
