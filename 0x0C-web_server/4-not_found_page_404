@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Redirection
+
+apt-get update -y;
+apt-get install -y nginx;
+
+mkdir /etc/nginx/html;
+touch /etc/nginx/html/index.html;
+touch /etc/nginx/html/40x.html
+echo "Hello World!" >> /etc/nginx/html/index.html;
+echo "Ceci n'est pas une page" >> /etc/nginx/html/40x.html;
+printf %s "server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  root /etc/nginx/html;
+  index index.html;
+
+  location /redirect_me {
+    return 301 https://i.imgur.com/guDXtsC.png;
+  }
+
+  error_page 404 /40x.html;
+    location /40x.html {
+        root /etc/nginx/html;
+        index 40x.html;
+    }
+}
+" > /etc/nginx/sites-available/default;
+
+sudo service nginx restart
