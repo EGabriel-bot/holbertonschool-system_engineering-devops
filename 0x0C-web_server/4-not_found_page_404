@@ -20,9 +20,9 @@ printf %s "server {
   }
 
   error_page 404 /40x.html;
-    location /40x.html {
+    location = /40x.html {
         root /etc/nginx/html;
-        index 40x.html;
+        internal;
     }
 }
 " > /etc/nginx/sites-available/default;
