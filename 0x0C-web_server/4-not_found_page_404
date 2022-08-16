@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Redirection
+# Not found page 404
 
 apt-get update -y;
 apt-get install -y nginx;
@@ -19,7 +19,7 @@ printf %s "server {
   location /redirect_me {
     return 301 https://i.imgur.com/guDXtsC.png;
   }
-  
+
   location = /40x.html {
       root /etc/nginx/html;
       internal;
