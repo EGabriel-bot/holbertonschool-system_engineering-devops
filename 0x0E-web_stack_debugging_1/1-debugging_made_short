@@ -2,4 +2,4 @@
 # web debug #1
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
-sudo service nginx stop
+nginx -s stop
