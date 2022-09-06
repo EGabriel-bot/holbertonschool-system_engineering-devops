@@ -2,5 +2,4 @@
 #Fix this container so that Nginx is running as the nginx user.
 pkill apache2;
 sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default;
-sudo sed -i 's/www-data/nginx/g' /etc/nginx/nginx.conf;
 sudo service nginx restart
