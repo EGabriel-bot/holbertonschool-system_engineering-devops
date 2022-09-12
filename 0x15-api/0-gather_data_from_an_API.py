@@ -33,4 +33,4 @@ print('Employee {} is done with tasks ({}/{}:)'
       .format(users['name'], tasks_done, total_tasks))
 
 for tasks in completed_tasks:
-    print('\t {}'.format(tasks))
+    print('     {}'.format(tasks))
