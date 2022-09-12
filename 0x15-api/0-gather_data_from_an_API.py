@@ -34,4 +34,4 @@ if __name__ == "__main__":
           .format(users['name'], tasks_done, total_tasks))
 
     for tasks in completed_tasks:
-        print(f'\t {tasks}')
+        print('\t {}'.format(tasks))
