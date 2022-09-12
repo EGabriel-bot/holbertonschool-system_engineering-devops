@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """Using a REST API return information about TO-DO list progress"""
+from curses.ascii import isdigit
+
+
 if __name__ == "__main__":
     import json
     import requests
@@ -23,15 +26,16 @@ if __name__ == "__main__":
     tasks_list = json.loads(response.text)
 
     """Iterating through todo list"""
-    for tasks in tasks_list:
-        if users['id'] == tasks['userId']:
-            if tasks['completed'] is True:
-                completed_tasks.append(tasks['title'])
-                tasks_done += 1
-            total_tasks += 1
+    if idd.isdigit() is True:
+        for tasks in tasks_list:
+            if users['id'] == tasks['userId']:
+                if tasks['completed'] is True:
+                    completed_tasks.append(tasks['title'])
+                    tasks_done += 1
+                total_tasks += 1
 
-    print('Employee {} is done with tasks({}/{}:)'
-          .format(users['name'], tasks_done, total_tasks))
+        print('Employee {} is done with tasks({}/{}:)'
+              .format(users['name'], tasks_done, total_tasks))
 
-    for tasks in completed_tasks:
-        print('\t {}'.format(tasks))
+        for tasks in completed_tasks:
+            print('\t {}'.format(tasks))
