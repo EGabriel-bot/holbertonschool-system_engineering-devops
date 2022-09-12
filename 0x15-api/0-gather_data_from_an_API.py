@@ -13,7 +13,7 @@ total_tasks = 0
 if __name__ == "__main__":
     if sys.argv[1].isdigit() is True:
         user = requests.get(
-            'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1]))
+            'https://jsonplaceholder.typicode.com/users/{}'.format(int(sys.argv[1])))
 
         """Get request to fetch the todo tasks"""
         response = requests.get(
