@@ -30,8 +30,8 @@ if __name__ == "__main__":
                 tasks_done += 1
             total_tasks += 1
 
-    print('Employee {} is done with tasks ({}/{}:)'
+    print('Employee {} is done with tasks({}/{}:)'
           .format(users['name'], tasks_done, total_tasks))
 
     for tasks in completed_tasks:
-        print('\t %s' % tasks)
+        print('\t {}'.format(tasks))
