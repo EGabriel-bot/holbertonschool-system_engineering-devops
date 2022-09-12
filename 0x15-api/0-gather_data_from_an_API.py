@@ -4,14 +4,14 @@ from curses.ascii import isdigit
 import json
 import requests
 import sys
+
+tasks_done = 0
+completed_tasks = []
+total_tasks = 0
+
+"""Get request to fetch users"""
 if __name__ == "__main__":
     if sys.argv[1].isdigit() is True:
-
-        tasks_done = 0
-        completed_tasks = []
-        total_tasks = 0
-
-        """Get request to fetch users"""
         user = requests.get(
             'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1]))
 
