@@ -39,7 +39,7 @@ if __name__ == "__main__":
     # generating csv file
         with open(f'{idd}.csv', 'w', newline='') as csvfile:
             for tasks in tasks_list:
-                writer = csv.writer(csvfile, delimiter=' ',
+                writer = csv.writer(csvfile, delimiter=',',
                                     quoting=csv.QUOTE_ALL)
                 if users['id'] == tasks['userId']:
                     writer.writerow([
