@@ -37,15 +37,16 @@ if __name__ == "__main__":
             print('\t {}'.format(tasks))
 
     # generating csv file
-    with open(f'{idd}.csv', 'w', newline='') as csvfile:
-        for tasks in tasks_list:
-            writer = csv.writer(csvfile, delimiter=' ', quoting=csv.QUOTE_ALL)
-            if users['id'] == tasks['userId']:
-                writer.writerow([
-                    users['id'],
-                    users['username'],
-                    tasks['completed'],
-                    tasks['title']])
-                total_tasks += 1
-            else:
-                pass
+        with open(f'{idd}.csv', 'w', newline='') as csvfile:
+            for tasks in tasks_list:
+                writer = csv.writer(csvfile, delimiter=' ',
+                                    quoting=csv.QUOTE_ALL)
+                if users['id'] == tasks['userId']:
+                    writer.writerow([
+                        users['id'],
+                        users['username'],
+                        tasks['completed'],
+                        tasks['title']])
+                    total_tasks += 1
+                else:
+                    pass
