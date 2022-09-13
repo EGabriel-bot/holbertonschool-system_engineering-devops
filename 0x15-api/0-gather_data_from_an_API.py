@@ -11,13 +11,11 @@ if __name__ == "__main__":
         """Get request to fetch users"""
         user = requests.get(
             'https://jsonplaceholder.typicode.com/users/{}'.format(idd))
+        users = json.loads(user.text)
 
         """Get request to fetch the todo tasks"""
         response = requests.get(
             'https://jsonplaceholder.typicode.com/todos/')
-
-        """Converting data from user and todos to a string dictionary"""
-        users = json.loads(user.text)
         tasks_list = json.loads(response.text)
 
         tasks_done = 0
