@@ -36,8 +36,8 @@ if __name__ == "__main__":
         for tasks in completed_tasks:
             print('\t {}'.format(tasks))
 
-    # generating csv file
-        with open(f'{idd}.csv', 'w', newline='') as csvfile:
+        with open('{}.csv'.format(idd), 'w', newline='') as csvfile:
+            """generating csv file"""
             for tasks in tasks_list:
                 writer = csv.writer(csvfile, delimiter=',',
                                     quoting=csv.QUOTE_ALL)
