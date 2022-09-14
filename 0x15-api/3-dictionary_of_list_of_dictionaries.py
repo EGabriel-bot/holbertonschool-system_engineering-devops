@@ -18,7 +18,7 @@ if __name__ == "__main__":
     tasks_list = json.loads(response.text)
 
     """generating json file"""
-    with open('todo_all_emplyees.json', 'w', encoding='utf-8') as jsonfile:
+    with open('todo_all_employees.json', 'w', encoding='utf-8') as jsonfile:
         u_info = {}
         for user in users:
             forma = []
