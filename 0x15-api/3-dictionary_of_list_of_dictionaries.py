@@ -37,7 +37,7 @@ if __name__ == "__main__":
             print('\t {}'.format(tasks))
 
         """generating json file"""
-        with open('{}.json'.format(idd), 'w', encoding='utf-8') as jsonfile:
+        with open('todo_all_emplyees.json'.format(idd), 'w', encoding='utf-8') as jsonfile:
             u_info = {}
             for user in users:
                 forma = []
