@@ -36,7 +36,7 @@ if __name__ == "__main__":
         for tasks in completed_tasks:
             print('\t {}'.format(tasks))
 
-        with open('{}.json'.format(idd), 'w', newline='') as jsonfile:
+        with open('{}.json'.format(idd), 'w', encoding='utf-8') as jsonfile:
             """generating json file"""
             forma = []
             j_myson = {}
@@ -47,5 +47,5 @@ if __name__ == "__main__":
                     j_myson["username"] = user['username']
                     copy = j_myson.copy()
                     forma.append(copy)
-                u_info = {user['id']: forma}
-                json.dump(u_info, jsonfile)
+            u_info = {user['id']: forma}
+            json.dump(u_info, jsonfile)
