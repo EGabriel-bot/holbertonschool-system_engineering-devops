@@ -44,8 +44,8 @@ if __name__ == "__main__":
                 if users['id'] == tasks['userId']:
                     j_myson["task"] = tasks['title']
                     j_myson["completed"] = tasks['completed']
-                    j_myson["username"] = user['username']
+                    j_myson["username"] = users['username']
                     copy = j_myson.copy()
                     forma.append(copy)
-            u_info = {user['id']: forma}
+            u_info = {users['id']: forma}
             json.dump(u_info, jsonfile)
