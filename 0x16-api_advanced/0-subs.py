@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Returns the number of subscribers for a given subreddit.
 If an invalid subreddit is given, the function should return 0."""
-import requests
 import json
+import requests
 
 
 def number_of_subscribers(subreddit):
